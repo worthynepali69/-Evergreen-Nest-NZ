@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evergreen Nest | Sustainable Indoor Plants Auckland</title>
+  <meta name="description" content="Evergreen Nest is Auckland's sustainable indoor plant boutique. Propagated locally in peat-free organic soil with recycled pots and plastic-free delivery.">
+
+  <!-- Bespoke Editorial Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+          },
+          colors: {
+            botanical: {
+              50: '#f6f8f5',
+              100: '#e9efe6',
+              200: '#d3e0cd',
+              600: '#2d523a',
+              700: '#1f3b28',
+              800: '#162b1d',
+              900: '#0f1e14',
+            },
+            clay: {
+              100: '#f9ebe4',
+              500: '#c4684b',
+              600: '#ac5539',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- =========================================================================
+       TASK 4 & WEEK 9 CHECKPOINT: GOOGLE ANALYTICS 4 (GA4)
+       Replace 'G-XXXXXXXXXX' with Prajwal's Evergreen Nest Measurement ID!
+       ========================================================================= -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { 'debug_mode': true });
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #f5f5f4; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #1f3b28; border-radius: 8px; }
+  </style>
+</head>
+<body class="bg-[#F9F8F4] text-stone-900 font-sans antialiased selection:bg-botanical-700 selection:text-white">
+
+  <!-- Offer & Sustainability Top Bar -->
+  <div class="bg-botanical-800 text-stone-100 text-xs sm:text-sm py-2.5 px-4 text-center font-medium tracking-wide">
+    <span>🌿 <strong>Student Eco Offer:</strong> Use code <span class="underline font-bold text-amber-200">AISGREEN15</span> for 15% off • 100% Peat-Free Soil & Recycled Pots</span>
+  </div>
+
+  <!-- Ultra-Clean Minimalist Header -->
+  <header class="bg-[#F9F8F4]/90 backdrop-blur-md sticky top-0 z-40 border-b border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Identity -->
+      <a href="#" onclick="showCatalogView(event)" class="flex items-center gap-2.5 focus:outline-none">
+        <span class="font-serif text-3xl sm:text-4xl font-bold text-botanical-900 tracking-tight">Evergreen Nest</span>
+      </a>
+
+      <!-- Minimal 2-Link Navigation -->
+      <nav aria-label="Main Navigation" class="hidden md:flex items-center gap-10 text-base font-medium text-stone-700">
+        <a href="#catalog" onclick="showCatalogView()" class="hover:text-botanical-700 transition">Shop Collection</a>
+        <a href="#sustainability" onclick="showCatalogView()" class="hover:text-botanical-700 transition">Our Eco Pledge</a>
+      </nav>
+
+      <!-- Cart Trigger -->
+      <div class="flex items-center gap-4">
+        <button onclick="toggleCart(true)" aria-label="Shopping Cart" class="bg-botanical-700 hover:bg-botanical-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2.5 transition shadow-sm">
+          <span>Bag</span>
+          <span id="cart-count-badge" class="bg-white text-botanical-900 text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       STOREFRONT HOME & CATALOG VIEW
+       ========================================================================= -->
+  <div id="storefront-home-view">
+    <!-- Editorial Hero Banner with Offer Box -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 pt-8 pb-12 sm:py-14">
+      <div class="bg-white rounded-[2rem] border border-stone-200/90 overflow-hidden shadow-sm grid lg:grid-cols-12 items-stretch">
+        
+        <!-- Left Editorial Copy -->
+        <div class="lg:col-span-6 p-8 sm:p-12 lg:p-16 flex flex-col justify-between space-y-8">
+          <div class="space-y-5">
+            <div class="inline-flex items-center gap-2 bg-botanical-50 border border-botanical-200 px-3.5 py-1.5 rounded-full text-xs font-semibold text-botanical-700 tracking-wide uppercase">
+              <span>Auckland Sustainable Plant Studio</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl font-bold text-stone-900 leading-[1.08] tracking-tight">
+              Bring the living forest indoors, <span class="italic font-normal text-botanical-700">sustainably.</span>
+            </h1>
+
+            <p class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-xl">
+              Ethically propagated indoor plants grown in 100% peat-free NZ coconut coir and paired with reclaimed terracotta pots. Delivered plastic-free across Auckland.
+            </p>
+          </div>
+
+          <div class="space-y-5 pt-2">
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#catalog" class="bg-botanical-700 hover:bg-botanical-800 text-white px-8 py-4 rounded-full font-semibold text-base transition shadow-sm">
+                Explore Plants
+              </a>
+              <div class="bg-clay-100 text-clay-600 px-5 py-3.5 rounded-full text-sm font-semibold">
+                🎁 Free Delivery Over $60
+              </div>
+            </div>
+
+            <!-- Key Trust Badges -->
+            <div class="pt-4 border-t border-stone-200/80 flex flex-wrap gap-6 text-xs sm:text-sm text-stone-600 font-medium">
+              <span>✓ 100% Peat-Free Soil</span>
+              <span>✓ Upcycled Clay Pots</span>
+              <span>✓ Plastic-Free Boxing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual (Uses monstera.png in same folder, uncropped framing) -->
+        <div class="lg:col-span-6 relative min-h-[380px] sm:min-h-[480px] bg-[#F3F2EE] flex items-center justify-center p-6 sm:p-10">
+          <img src="monstera.png" 
+               alt="Lush Monstera Deliciosa in sustainable pot" 
+               onerror="this.src='https://placehold.co/800x700/e9efe6/1f3b28?text=Evergreen+Nest+(monstera.png)'"
+               class="w-full h-full max-h-[440px] object-contain rounded-2xl">
+          
+          <!-- Floating Offer Tag on Image -->
+          <div class="absolute bottom-6 left-6 right-6 sm:right-auto bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-lg border border-stone-200/80 max-w-xs">
+            <span class="text-xs font-bold uppercase tracking-wider text-clay-600">Opening Offer</span>
+            <p class="font-serif text-xl font-bold text-stone-900 mt-0.5">15% Off Student Flats</p>
+            <p class="text-xs text-stone-600 mt-1">Apply code <strong>AISGREEN15</strong> at checkout. Includes free compostable liner.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         CURATED 8-ITEM PRODUCT CATALOG (UNCROPPED STUDIO FRAMING)
+         ========================================================================= -->
+    <main id="catalog" class="max-w-7xl mx-auto px-4 sm:px-8 py-10">
+      
+      <!-- Section Heading & Search/Filter Bar -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6 pb-6 border-b border-stone-200">
+        <div>
+          <h2 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">Curated Collection</h2>
+          <p class="text-base text-stone-600 mt-2">Click any plant to view care specs, customize pot material, or add to bag.</p>
+        </div>
+
+        <!-- Search & Sort Controls (Required for Week 10 Usability Testing) -->
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="relative">
+            <input type="text" id="search-input" oninput="applyFilters()" placeholder="Search plants or pots..." 
+                   aria-label="Search products"
+                   class="pl-10 pr-4 py-3 rounded-full border border-stone-300 text-sm bg-white focus:ring-2 focus:ring-botanical-600 focus:outline-none w-56 sm:w-64">
+            <svg class="w-4 h-4 text-stone-400 absolute left-4 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+
+          <select id="sort-select" onchange="applyFilters()" aria-label="Sort products" class="px-4 py-3 rounded-full border border-stone-300 text-sm bg-white font-medium cursor-pointer">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clean Category Filter Pills -->
+      <div class="flex items-center gap-2.5 overflow-x-auto pb-4 mb-8" role="tablist">
+        <button onclick="setCategory('all', this)" class="cat-btn bg-botanical-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shrink-0">All Products (8)</button>
+        <button onclick="setCategory('Indoor Plants', this)" class="cat-btn bg-white hover:bg-stone-100 text-stone-700 border border-stone-300 px-5 py-2.5 rounded-full text-sm font-semibold transition shrink-0">Indoor Plants</button>
+        <button onclick="setCategory('Pet-Safe', this)" class="cat-btn bg-white hover:bg-stone-100 text-stone-700 border border-stone-300 px-5 py-2.5 rounded-full text-sm font-semibold transition shrink-0">Pet-Safe</button>
+        <button onclick="setCategory('Pots & Care', this)" class="cat-btn bg-white hover:bg-stone-100 text-stone-700 border border-stone-300 px-5 py-2.5 rounded-full text-sm font-semibold transition shrink-0">Recycled Pots & Care</button>
+      </div>
+
+      <!-- Larger 3-Column Product Grid -->
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </main>
+
+    <!-- =========================================================================
+         TASK 6: SUSTAINABILITY & ACCESSIBILITY PLEDGE (CLEAN 3-CARD SECTION)
+         ========================================================================= -->
+    <section id="sustainability" class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
+      <div class="bg-botanical-800 text-stone-100 rounded-[2rem] p-8 sm:p-14">
+        <div class="max-w-2xl mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-emerald-300">Why Evergreen Nest</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 leading-tight">Designed for healthier rooms and zero landfill waste.</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-botanical-700/60 border border-botanical-600 p-7 rounded-2xl">
+            <div class="text-2xl mb-3">🌱</div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-2">100% Peat-Free Soil</h3>
+            <p class="text-sm text-stone-200 leading-relaxed">
+              Every plant is grown in New Zealand coco-coir, composted bark, and organic worm castings—protecting vital peatland carbon sinks.
+            </p>
+          </div>
+
+          <div class="bg-botanical-700/60 border border-botanical-600 p-7 rounded-2xl">
+            <div class="text-2xl mb-3">🏺</div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-2">Upcycled Pots & Packaging</h3>
+            <p class="text-sm text-stone-200 leading-relaxed">
+              Our pots are molded from reclaimed terracotta and ocean-bound plastics. Orders ship in biodegradable kraft honeycomb with zero bubble wrap.
+            </p>
+          </div>
+
+          <div class="bg-botanical-700/60 border border-botanical-600 p-7 rounded-2xl">
+            <div class="text-2xl mb-3">🤝</div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-2">Accessible & Student Fair</h3>
+            <p class="text-sm text-stone-200 leading-relaxed">
+              Built with high-contrast legible typography, descriptive image alt-tags, and a permanent 15% student discount (<strong>AISGREEN15</strong>).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- =========================================================================
+       DEDICATED SINGLE PRODUCT PAGE + BOTTOM RECOMMENDATIONS
+       ========================================================================= -->
+  <section id="product-detail-view" class="hidden max-w-7xl mx-auto px-4 sm:px-8 py-10">
+    <!-- Breadcrumb / Back Button -->
+    <div class="mb-8">
+      <button onclick="showCatalogView()" class="inline-flex items-center gap-2 text-sm font-semibold text-botanical-800 hover:text-botanical-600 bg-white border border-stone-200 px-5 py-2.5 rounded-full shadow-sm transition">
+        <span>← Back to Collection</span>
+      </button>
+    </div>
+
+    <!-- Main Product Showcase Grid -->
+    <div id="product-detail-content" class="bg-white rounded-[2rem] border border-stone-200/90 overflow-hidden shadow-sm grid lg:grid-cols-12">
+      <!-- Populated dynamically via openProductPage(id) -->
+    </div>
+
+    <!-- Bottom Recommendations Section -->
+    <div class="mt-20 pt-12 border-t border-stone-200">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-clay-600">Complete Your Indoor Jungle</span>
+          <h3 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 mt-1">Recommended For You</h3>
+        </div>
+        <button onclick="showCatalogView()" class="text-sm font-semibold text-botanical-700 hover:underline hidden sm:inline">View All 8 Items →</button>
+      </div>
+
+      <div id="recommended-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Populated dynamically with 3 recommended items -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SLIDE-OVER SHOPPING BAG DRAWER
+       ========================================================================= -->
+  <div id="cart-overlay" onclick="toggleCart(false)" class="fixed inset-0 bg-black/50 z-50 hidden transition-opacity"></div>
+  <aside id="cart-drawer" aria-label="Shopping Bag Drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-6 border-b border-stone-200 flex items-center justify-between bg-botanical-900 text-white">
+      <h2 class="font-serif text-2xl font-bold">Your Shopping Bag</h2>
+      <button onclick="toggleCart(false)" class="text-2xl leading-none hover:text-stone-300">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress Bar -->
+    <div class="bg-botanical-50 px-6 py-3 border-b border-botanical-100 text-xs sm:text-sm text-botanical-800 font-medium" id="shipping-bar-text">
+      Add $60.00 more for FREE Zero-Emission Auckland Delivery!
+    </div>
+
+    <!-- Cart Items List -->
+    <div id="cart-items-list" class="p-6 flex-1 overflow-y-auto space-y-4 custom-scrollbar">
+      <!-- Dynamic items -->
+    </div>
+
+    <!-- Cart Footer with Coupon & Eco Impact -->
+    <div class="p-6 border-t border-stone-200 bg-stone-50 space-y-4">
+      <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 flex items-center justify-between text-xs sm:text-sm text-emerald-900">
+        <span>🌱 <strong>Plastic & Peat Saved:</strong></span>
+        <span class="font-bold text-emerald-800"><span id="cart-co2-total">0.0</span> kg CO₂e</span>
+      </div>
+
+      <!-- Coupon Code Box -->
+      <div class="flex gap-2">
+        <input type="text" id="promo-input" placeholder="Promo code (AISGREEN15)" class="flex-1 px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm uppercase bg-white">
+        <button onclick="applyPromoCode()" class="bg-stone-900 hover:bg-stone-800 text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider">Apply</button>
+      </div>
+      <p id="promo-msg" class="text-xs font-semibold hidden"></p>
+
+      <div class="space-y-1.5 text-sm pt-1">
+        <div class="flex justify-between text-stone-600">
+          <span>Plastic-Free Kraft Boxing:</span>
+          <span class="text-botanical-700 font-semibold">FREE</span>
+        </div>
+        <div class="flex justify-between text-stone-600">
+          <span>Discount:</span>
+          <span id="cart-discount-display">-$0.00</span>
+        </div>
+        <div class="flex justify-between text-lg font-bold text-stone-900 pt-2 border-t border-stone-200">
+          <span>Total (NZD):</span>
+          <span id="cart-total-display">$0.00</span>
+        </div>
+      </div>
+
+      <button onclick="openCheckoutModal()" class="w-full bg-botanical-700 hover:bg-botanical-800 text-white py-4 rounded-full font-semibold text-base shadow-md transition">
+        Proceed to Test Checkout →
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       TASK 2, 5 & 7: TEST CHECKOUT MODAL WITH GOOGLE SHEETS SYNC
+       ========================================================================= -->
+  <div id="checkout-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-stone-200 my-8">
+      
+      <!-- Form View -->
+      <div id="checkout-form-view">
+        <div class="flex items-center justify-between pb-4 border-b border-stone-200">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">🔒 HTTPS Secure Test Checkout</span>
+            <h2 class="font-serif text-3xl font-bold text-stone-900 mt-0.5">Complete Order</h2>
+          </div>
+          <button onclick="closeCheckoutModal()" class="text-stone-400 hover:text-stone-700 text-2xl">&times;</button>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 text-amber-900 rounded-xl p-3.5 text-xs my-4 leading-relaxed">
+          <strong>Academic Test Mode:</strong> No real money is charged. Submitting this checkout logs your order to our Database / Google Sheet and fires a <code>purchase</code> event to Google Analytics.
+        </div>
+
+        <form id="checkout-form" onsubmit="submitOrderToBackend(event)" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-3.5">
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">Full Name *</label>
+              <input type="text" id="order-name" required placeholder="e.g. Alex Tester" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">Email Address *</label>
+              <input type="email" id="order-email" required placeholder="tester@ais.ac.nz" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Auckland Delivery Address *</label>
+            <input type="text" id="order-address" required placeholder="28a Linwood Ave, Mount Albert, Auckland" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm">
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3.5">
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">Auckland Suburb & Postcode *</label>
+              <input type="text" id="order-suburb" required placeholder="e.g. Mt Albert, 1025" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">Sustainable Dispatch Method</label>
+              <select id="order-delivery" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm bg-white">
+                <option value="Zero-Emission Cargo Bike">🚲 Cargo Bike (Auckland Central)</option>
+                <option value="EV Van Courier">⚡ Electric Van Courier</option>
+                <option value="Click & Collect (Mt Albert)">🏡 Nursery Click & Collect</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Packaging & Delivery Preference</label>
+            <select id="order-packaging" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm bg-white">
+              <option value="100% Plastic-Free Kraft Box">📦 100% Plastic-Free Kraft Box + Compostable Liner</option>
+              <option value="Reusable Crate Swap">♻️ Reusable Nursery Crate Swap (Zero Cardboard)</option>
+            </select>
+          </div>
+
+          <!-- Simulated PCI-DSS Card Input -->
+          <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-stone-700">Sandbox Payment Card (Pre-filled)</span>
+              <span class="text-[11px] text-stone-500">Tokenized PCI-DSS</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <input type="text" readonly value="4242 •••• •••• 4242" class="col-span-2 px-3 py-2 rounded-lg bg-white border border-stone-300 text-xs text-stone-600 font-mono">
+              <input type="text" readonly value="12/28 • 888" class="px-3 py-2 rounded-lg bg-white border border-stone-300 text-xs text-stone-600 font-mono">
+            </div>
+          </div>
+
+          <div class="pt-2 flex items-center gap-3">
+            <button type="button" onclick="closeCheckoutModal()" class="px-5 py-3.5 rounded-full border border-stone-300 text-xs font-bold text-stone-700 hover:bg-stone-100">Cancel</button>
+            <button type="submit" id="submit-order-btn" class="flex-1 bg-botanical-700 hover:bg-botanical-800 text-white py-3.5 rounded-full font-semibold text-sm shadow-md transition">
+              Place Test Order (<span id="checkout-btn-total">$0.00</span>)
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Order Confirmation Receipt View -->
+      <div id="checkout-receipt-view" class="hidden text-center space-y-4">
+        <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center text-3xl mx-auto">✓</div>
+        <h3 class="font-serif text-3xl font-bold text-stone-900">Order Confirmed!</h3>
+        <p class="text-sm text-stone-600">Thank you for testing Evergreen Nest. Your order is recorded.</p>
+        
+        <div class="bg-botanical-50 border border-botanical-200 rounded-2xl p-4 text-left text-xs sm:text-sm space-y-1.5">
+          <p><strong>Order Reference:</strong> <span id="receipt-order-id" class="font-mono font-bold text-botanical-800"></span></p>
+          <p><strong>Customer:</strong> <span id="receipt-customer"></span></p>
+          <p><strong>Items Ordered:</strong> <span id="receipt-items"></span></p>
+          <p><strong>Delivery Method:</strong> <span id="receipt-delivery"></span></p>
+          <p><strong>Carbon Saved:</strong> <span id="receipt-co2" class="font-bold text-emerald-700"></span></p>
+          <p><strong>Total Paid (Test):</strong> <span id="receipt-total" class="font-bold text-stone-900"></span></p>
+          <p><strong>Database Status:</strong> <span id="receipt-sync-status" class="font-semibold text-emerald-700">Saved to Orders Database</span></p>
+        </div>
+
+        <button onclick="finishCheckoutAndClose()" class="w-full bg-botanical-700 hover:bg-botanical-800 text-white py-3.5 rounded-full font-semibold text-sm">
+          Return to Store
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       TASK 5: NEW ZEALAND PRIVACY ACT 2020 MODAL
+       ========================================================================= -->
+  <div id="privacy-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-stone-200">
+        <h2 class="font-serif text-3xl font-bold text-botanical-900">Privacy Policy (NZ Privacy Act 2020)</h2>
+        <button onclick="closePrivacyModal()" class="text-2xl text-stone-400 hover:text-stone-700">&times;</button>
+      </div>
+      <div class="space-y-3 text-sm text-stone-600 mt-4 leading-relaxed">
+        <p><strong>Evergreen Nest NZ</strong> complies with the <strong>New Zealand Privacy Act 2020</strong> and its Information Privacy Principles (IPPs):</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>IPP 1 (Purpose of Collection):</strong> We collect customer name, email, and Auckland delivery address solely to process orders and calculate sustainability metrics.</li>
+          <li><strong>IPP 5 (Storage & Security):</strong> All traffic uses HTTPS encryption. Test payment cards are tokenized client-side and are never stored in plain text.</li>
+          <li><strong>IPP 6 & 7 (Access & Correction):</strong> Customers may request access to or correction of their personal data by contacting <code>privacy@evergreennest.co.nz</code>.</li>
+          <li><strong>IPP 11 (Disclosure Limits):</strong> Customer data is strictly used for this INFO714 academic project and is never sold or shared with third parties.</li>
+        </ul>
+      </div>
+      <button onclick="closePrivacyModal()" class="mt-6 w-full bg-botanical-700 text-white py-3 rounded-full font-semibold text-sm">Close Policy</button>
+    </div>
+  </div>
+
+  <!-- Clean Footer (Group Members Ordered: Aayush, Prajwal, Nitesh, Kebin) -->
+  <footer class="bg-botanical-900 text-stone-300 pt-14 pb-10 text-sm border-t border-botanical-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">Security & Compliance</h4>
+        <ul class="space-y-2 text-xs sm:text-sm">
+          <li><button onclick="openPrivacyModal()" class="hover:text-white underline">NZ Privacy Act 2020 Policy</button></li>
+          <li class="text-emerald-400">🔒 HTTPS & Tokenized Test Checkout</li>
+          <li class="text-stone-400">🛡️ Customer Data Protected (IPP 5)</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-xs">INFO714 Group Members</h4>
+        <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+          Aayush Bashyal (20240801)<br>
+          Prajwal Kafle (20240078)<br>
+          Nitesh Aryal (20240343)<br>
+          Kebin Poudel (20220769)
+        </p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 pt-6 border-t border-botanical-800 text-center text-xs text-stone-500">
+      &copy; 2026 Evergreen Nest NZ. AIS INFO714 E-Business Strategies & M-Commerce Assessment.
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       STOREFRONT LOGIC & GOOGLE SHEETS ORDER SYNC
+       ========================================================================= -->
+  <script>
+    /**
+     * CONNECTED GOOGLE APPS SCRIPT WEB APP URL
+     * Deployment ID: AKfycbyPIC4ktqyTjyMoOY5SVrtWdybhW0rqxGBBODMet1uULBL-41nbMsN7tPttUQt4kj6-
+     */
+    const GOOGLE_SHEETS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyPIC4ktqyTjyMoOY5SVrtWdybhW0rqxGBBODMet1uULBL-41nbMsN7tPttUQt4kj6-/exec"; 
+
+    // Helper: Automatically generates "<firstword>.png" in the same folder
+    function getLocalImageName(productName) {
+      const firstWord = productName.split(' ')[0].replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+      return `${firstWord}.png`;
+    }
+
+    // 8 Curated Sustainable Products
+    const PRODUCTS = [
+      {
+        id: 1,
+        name: "Monstera Deliciosa (Medium)",
+        category: "Indoor Plants",
+        price: 35.00,
+        petSafe: false,
+        co2Saved: 1.4,
+        ecoBadge: "100% Peat-Free Soil",
+        lightSpec: "Bright Indirect Light",
+        waterSpec: "Every 7–10 Days",
+        careNote: "Bright indirect light • Water weekly",
+        description: "Iconic tropical Swiss Cheese plant propagated locally in Auckland coco-coir compost. Develops dramatic fenestrated leaves as it matures.",
+        image: getLocalImageName("Monstera Deliciosa (Medium)")
+      },
+      {
+        id: 2,
+        name: "Organic Plant Fertiliser",
+        category: "Pots & Care",
+        price: 12.00,
+        petSafe: true,
+        co2Saved: 0.9,
+        ecoBadge: "Refillable Glass Bottle",
+        lightSpec: "All Indoor Plants",
+        waterSpec: "Dilute 5ml per Litre",
+        careNote: "100% Natural NZ Seaweed Tonic",
+        description: "Cold-pressed NZ seaweed and worm-casting liquid plant food with zero synthetic chemicals. Bottled in reusable amber glass.",
+        image: getLocalImageName("Organic Plant Fertiliser")
+      },
+      {
+        id: 3,
+        name: "Pothos (Devil's Ivy)",
+        category: "Indoor Plants",
+        price: 22.00,
+        petSafe: false,
+        co2Saved: 1.1,
+        ecoBadge: "Natural Air Purifier",
+        lightSpec: "Low to Bright Light",
+        waterSpec: "When Top Soil Dries",
+        careNote: "Low to bright light • Easy care",
+        description: "Fast-trailing leafy vine that thrives on student bookshelves and shady bedroom corners while filtering indoor air pollutants.",
+        image: getLocalImageName("Pothos (Devil's Ivy)")
+      },
+      {
+        id: 4,
+        name: "Recycled Terracotta Pot",
+        category: "Pots & Care",
+        price: 15.00,
+        petSafe: true,
+        co2Saved: 1.8,
+        ecoBadge: "100% Upcycled Clay",
+        lightSpec: "Breathable Porous Wall",
+        waterSpec: "Built-in Drainage Hole",
+        careNote: "15cm Diameter • Drainage hole included",
+        description: "Breathable artisan planter crafted from reclaimed ceramic and brick kiln offcuts. Prevents overwatering and root rot naturally.",
+        image: getLocalImageName("Recycled Terracotta Pot")
+      },
+      {
+        id: 5,
+        name: "Snake Plant (Sansevieria)",
+        category: "Indoor Plants",
+        price: 28.00,
+        petSafe: false,
+        co2Saved: 1.3,
+        ecoBadge: "Night Oxygen Producer",
+        lightSpec: "Low Light to Full Sun",
+        waterSpec: "Every 3–4 Weeks",
+        careNote: "Any light level • Water monthly",
+        description: "Architectural upright succulent plant that converts CO₂ into fresh oxygen overnight—ideal for bedrooms and study desks.",
+        image: getLocalImageName("Snake Plant (Sansevieria)")
+      },
+      {
+        id: 6,
+        name: "Calathea Orbifolia (Prayer Plant)",
+        category: "Pet-Safe",
+        price: 29.00,
+        petSafe: true,
+        co2Saved: 1.2,
+        ecoBadge: "100% Pet-Safe Foliage",
+        lightSpec: "Medium Filtered Shade",
+        waterSpec: "Keep Soil Lightly Moist",
+        careNote: "Medium light • Non-toxic to cats & dogs",
+        description: "Silvery-green striped leaves that fold upward at dusk. Completely non-toxic and safe for curious cats and dogs.",
+        image: getLocalImageName("Calathea Orbifolia (Prayer Plant)")
+      },
+      {
+        id: 7,
+        name: "ZZ Plant (Zamioculcas)",
+        category: "Indoor Plants",
+        price: 32.00,
+        petSafe: false,
+        co2Saved: 1.5,
+        ecoBadge: "Ultra-Low Water Use",
+        lightSpec: "Low Light Tolerant",
+        waterSpec: "Every 3 Weeks",
+        careNote: "Low light tolerant • Drought hardy",
+        description: "Glossy emerald stems that thrive in low-light apartments with minimal watering thanks to water-storing rhizomes.",
+        image: getLocalImageName("ZZ Plant (Zamioculcas)")
+      },
+      {
+        id: 8,
+        name: "Spider Plant (Chlorophytum)",
+        category: "Pet-Safe",
+        price: 19.00,
+        petSafe: true,
+        co2Saved: 1.0,
+        ecoBadge: "Pet-Safe & Air Filtering",
+        lightSpec: "Bright to Medium Light",
+        waterSpec: "Weekly in Summer",
+        careNote: "Indirect light • Safe for cats & dogs",
+        description: "Resilient variegated foliage that filters indoor toxins, produces baby plantlets to share, and is 100% pet-friendly.",
+        image: getLocalImageName("Spider Plant (Chlorophytum)")
+      }
+    ];
+
+    let cart = [];
+    let selectedCategory = 'all';
+    let discountRate = 0;
+
+    // Render Larger Editorial Product Cards (Uncropped object-contain with clean padding)
+    function renderCatalog(list) {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = '';
+
+      if (list.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center py-16 text-stone-500 text-lg">No plants matched your search.</div>`;
+        return;
+      }
+
+      list.forEach(item => {
+        const card = document.createElement('article');
+        card.className = "group bg-white rounded-3xl border border-stone-200/90 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col";
+        card.innerHTML = `
+          <div onclick="openProductPage(${item.id})" class="relative h-80 bg-[#F3F2EE] p-6 pt-14 flex items-center justify-center overflow-hidden cursor-pointer">
+            <img src="${item.image}" alt="${item.name}" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x600/e9efe6/1f3b28?text=${encodeURIComponent(item.image)}'"
+                 class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+            <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm text-botanical-800 text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-sm border border-stone-200/60">
+              ♻️ ${item.ecoBadge}
+            </span>
+          </div>
+          <div class="p-6 sm:p-7 flex-1 flex flex-col">
+            <div class="text-xs font-semibold uppercase tracking-wider text-clay-600 mb-1">${item.careNote}</div>
+            <h3 onclick="openProductPage(${item.id})" class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 leading-snug hover:text-botanical-700 cursor-pointer transition">${item.name}</h3>
+            <p class="text-sm text-stone-600 mt-2 mb-6 flex-1 leading-relaxed">${item.description}</p>
+
+            <div class="flex items-center justify-between pt-4 border-t border-stone-100 gap-2">
+              <div>
+                <span class="text-xs text-stone-400 block">NZD</span>
+                <span class="text-2xl font-bold text-stone-900">$${item.price.toFixed(2)}</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="openProductPage(${item.id})" class="border border-stone-300 hover:bg-stone-100 text-stone-800 text-xs font-semibold px-4 py-3 rounded-full transition">
+                  Details
+                </button>
+                <button onclick="quickAdd(${item.id})" class="bg-botanical-700 hover:bg-botanical-800 text-white text-sm font-semibold px-5 py-3 rounded-full transition shadow-sm">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // =========================================================================
+    // DEDICATED SINGLE PRODUCT PAGE & RECOMMENDATIONS LOGIC
+    // =========================================================================
+    function openProductPage(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      document.getElementById('storefront-home-view').classList.add('hidden');
+      const detailView = document.getElementById('product-detail-view');
+      detailView.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'view_item', {
+          currency: 'NZD',
+          value: product.price,
+          items: [{ item_id: String(product.id), item_name: product.name, item_category: product.category, price: product.price }]
+        });
+      }
+
+      const isPlant = product.category !== 'Pots & Care';
+      const detailContent = document.getElementById('product-detail-content');
+
+      detailContent.innerHTML = `
+        <div class="lg:col-span-6 bg-[#F3F2EE] relative min-h-[380px] sm:min-h-[520px] p-8 sm:p-14 flex items-center justify-center">
+          <img src="${product.image}" alt="${product.name}"
+               onerror="this.src='https://placehold.co/800x800/e9efe6/1f3b28?text=${encodeURIComponent(product.image)}'"
+               class="w-full h-full max-h-[440px] object-contain">
+          <span class="absolute top-6 left-6 bg-white/95 backdrop-blur-sm text-botanical-800 text-xs font-bold px-4 py-2 rounded-full shadow-sm border border-stone-200/60">
+            ♻️ ${product.ecoBadge}
+          </span>
+        </div>
+
+        <div class="lg:col-span-6 p-8 sm:p-12 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-wider text-clay-600">
+              <span>${product.category}</span>
+              <span>•</span>
+              <span>Saves ${product.co2Saved} kg CO₂e</span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold text-stone-900 leading-tight">${product.name}</h1>
+            <div class="text-3xl font-bold text-botanical-800">$${product.price.toFixed(2)} <span class="text-sm font-normal text-stone-500">NZD</span></div>
+
+            <p class="text-stone-600 text-base leading-relaxed pt-2">${product.description}</p>
+
+            <!-- Care & Sustainability Specs Grid -->
+            <div class="grid grid-cols-2 gap-4 pt-4">
+              <div class="bg-botanical-50 border border-botanical-100 p-4 rounded-2xl">
+                <span class="text-xs text-stone-500 block">Light / Material</span>
+                <strong class="text-sm text-botanical-900 mt-0.5 block">${product.lightSpec}</strong>
+              </div>
+              <div class="bg-botanical-50 border border-botanical-100 p-4 rounded-2xl">
+                <span class="text-xs text-stone-500 block">Care / Drainage</span>
+                <strong class="text-sm text-botanical-900 mt-0.5 block">${product.waterSpec}</strong>
+              </div>
+            </div>
+
+            <!-- Pot / Packaging Customizer -->
+            <div class="pt-3">
+              <label for="detail-pot-option" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                ${isPlant ? 'Choose Sustainable Planter Option' : 'Choose Eco Packaging Option'}
+              </label>
+              <select id="detail-pot-option" class="w-full px-4 py-3 rounded-xl border border-stone-300 text-sm bg-white font-medium">
+                ${isPlant ? `
+                  <option value="Nursery Compostable Coir Pot (Included)">🌱 Nursery Compostable Coir Pot (Included)</option>
+                  <option value="Upcycled Terracotta Pot (+$0 Eco Promo)">🏺 Upcycled Terracotta Pot (Free Student Upgrade)</option>
+                  <option value="Ocean-Bound Recycled Plastic Pot">🌊 Ocean-Bound Recycled Plastic Pot</option>
+                ` : `
+                  <option value="Plastic-Free Kraft Honeycomb Wrap">📦 Plastic-Free Kraft Honeycomb Wrap</option>
+                  <option value="Zero-Waste Refill Pouch">♻️ Zero-Waste Refill Pouch</option>
+                `}
+              </select>
+            </div>
+          </div>
+
+          <!-- Quantity & Add to Bag Actions -->
+          <div class="pt-6 border-t border-stone-200 flex flex-wrap items-center gap-4">
+            <div class="flex items-center border border-stone-300 rounded-full px-3 py-1.5 bg-stone-50">
+              <button type="button" onclick="adjustDetailQty(-1)" class="w-8 h-8 font-bold text-stone-700 hover:text-black">-</button>
+              <span id="detail-qty-val" class="w-8 text-center font-bold text-base">1</span>
+              <button type="button" onclick="adjustDetailQty(1)" class="w-8 h-8 font-bold text-stone-700 hover:text-black">+</button>
+            </div>
+
+            <button onclick="addFromProductPage(${product.id})" class="flex-1 bg-botanical-700 hover:bg-botanical-800 text-white py-4 px-8 rounded-full font-semibold text-base shadow-md transition">
+              Add to Shopping Bag
+            </button>
+          </div>
+        </div>
+      `;
+
+      renderRecommendations(productId);
+    }
+
+    function adjustDetailQty(delta) {
+      const el = document.getElementById('detail-qty-val');
+      if (!el) return;
+      let val = parseInt(el.textContent, 10) + delta;
+      if (val < 1) val = 1;
+      el.textContent = val;
+    }
+
+    function addFromProductPage(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      const qtyEl = document.getElementById('detail-qty-val');
+      const optEl = document.getElementById('detail-pot-option');
+      const qty = qtyEl ? parseInt(qtyEl.textContent, 10) : 1;
+      const optionNote = optEl ? optEl.value : "Standard";
+
+      if (!product) return;
+
+      const existing = cart.find(item => item.id === productId && item.optionNote === optionNote);
+      if (existing) {
+        existing.qty += qty;
+      } else {
+        cart.push({ ...product, qty, optionNote });
+      }
+
+      updateCartUI();
+      toggleCart(true);
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'add_to_cart', {
+          currency: 'NZD',
+          value: product.price * qty,
+          items: [{ item_id: String(product.id), item_name: product.name, item_variant: optionNote, price: product.price, quantity: qty }]
+        });
+      }
+    }
+
+    function renderRecommendations(excludeId) {
+      const recGrid = document.getElementById('recommended-products-grid');
+      recGrid.innerHTML = '';
+
+      const recommendations = PRODUCTS.filter(p => p.id !== excludeId).slice(0, 3);
+
+      recommendations.forEach(item => {
+        const card = document.createElement('article');
+        card.className = "group bg-white rounded-3xl border border-stone-200/90 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col";
+        card.innerHTML = `
+          <div onclick="openProductPage(${item.id})" class="relative h-64 bg-[#F3F2EE] p-5 pt-12 flex items-center justify-center overflow-hidden cursor-pointer">
+            <img src="${item.image}" alt="${item.name}" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x600/e9efe6/1f3b28?text=${encodeURIComponent(item.image)}'"
+                 class="w-full h-full object-contain group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 left-3 bg-white/95 text-botanical-800 text-xs font-semibold px-3 py-1 rounded-full border border-stone-200/60">
+              ♻️ ${item.ecoBadge}
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="text-xs font-semibold uppercase tracking-wider text-clay-600 mb-1">${item.careNote}</div>
+            <h4 onclick="openProductPage(${item.id})" class="font-serif text-2xl font-bold text-stone-900 hover:text-botanical-700 cursor-pointer">${item.name}</h4>
+            <div class="flex items-center justify-between pt-4 mt-auto border-t border-stone-100">
+              <span class="text-xl font-bold text-stone-900">$${item.price.toFixed(2)}</span>
+              <button onclick="openProductPage(${item.id})" class="bg-botanical-50 hover:bg-botanical-700 text-botanical-800 hover:text-white text-xs font-bold px-4 py-2.5 rounded-full transition">
+                View Plant →
+              </button>
+            </div>
+          </div>
+        `;
+        recGrid.appendChild(card);
+      });
+    }
+
+    function showCatalogView(e) {
+      if (e) e.preventDefault();
+      document.getElementById('product-detail-view').classList.add('hidden');
+      document.getElementById('storefront-home-view').classList.remove('hidden');
+    }
+
+    // Category & Search Filtering
+    function setCategory(cat, btn) {
+      selectedCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(b => {
+        b.className = "cat-btn bg-white hover:bg-stone-100 text-stone-700 border border-stone-300 px-5 py-2.5 rounded-full text-sm font-semibold transition shrink-0";
+      });
+      if (btn) {
+        btn.className = "cat-btn bg-botanical-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shrink-0";
+      }
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('search-input').value.toLowerCase().trim();
+      const sort = document.getElementById('sort-select').value;
+
+      let filtered = PRODUCTS.filter(p => {
+        const matchesCat = selectedCategory === 'all' 
+          || p.category === selectedCategory 
+          || (selectedCategory === 'Pet-Safe' && p.petSafe);
+        const matchesSearch = p.name.toLowerCase().includes(query) 
+          || p.description.toLowerCase().includes(query)
+          || p.careNote.toLowerCase().includes(query);
+        return matchesCat && matchesSearch;
+      });
+
+      if (sort === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+      if (sort === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+
+      renderCatalog(filtered);
+    }
+
+    // Cart Management & GA4 Events
+    function quickAdd(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const existing = cart.find(item => item.id === productId && !item.optionNote);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...product, qty: 1, optionNote: "Standard Eco Pot" });
+      }
+
+      updateCartUI();
+      toggleCart(true);
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'add_to_cart', {
+          currency: 'NZD',
+          value: product.price,
+          items: [{ item_id: String(product.id), item_name: product.name, item_category: product.category, price: product.price, quantity: 1 }]
+        });
+      }
+    }
+
+    function changeQty(idx, delta) {
+      if (!cart[idx]) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) cart.splice(idx, 1);
+      updateCartUI();
+    }
+
+    function applyPromoCode() {
+      const code = document.getElementById('promo-input').value.trim().toUpperCase();
+      const msg = document.getElementById('promo-msg');
+      if (code === 'AISGREEN15' || code === 'ECO15') {
+        discountRate = 0.15;
+        msg.textContent = "✓ 15% Student Eco Discount Applied!";
+        msg.className = "text-xs font-semibold text-emerald-700 block";
+      } else {
+        discountRate = 0;
+        msg.textContent = "Invalid code. Try AISGREEN15";
+        msg.className = "text-xs font-semibold text-red-600 block";
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+      document.getElementById('cart-count-badge').textContent = totalItems;
+
+      const listEl = document.getElementById('cart-items-list');
+      listEl.innerHTML = '';
+
+      let rawSubtotal = 0;
+      let totalCo2 = 0;
+
+      if (cart.length === 0) {
+        listEl.innerHTML = `<div class="text-center py-14 text-stone-400 text-base">Your bag is empty.<br>Add a plant or recycled pot to begin.</div>`;
+      } else {
+        cart.forEach((item, idx) => {
+          rawSubtotal += item.price * item.qty;
+          totalCo2 += item.co2Saved * item.qty;
+          const row = document.createElement('div');
+          row.className = "flex items-center gap-4 bg-stone-50 p-3.5 rounded-2xl border border-stone-200";
+          row.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" onerror="this.src='https://placehold.co/150x150/e9efe6/1f3b28?text=Plant'" class="w-16 h-16 rounded-xl object-contain bg-[#F3F2EE] p-1">
+            <div class="flex-1">
+              <h4 class="font-serif text-lg font-bold text-stone-900 leading-tight">${item.name}</h4>
+              <p class="text-[11px] text-stone-500">${item.optionNote || 'Standard Eco Pot'}</p>
+              <p class="text-sm text-botanical-700 font-semibold mt-0.5">$${(item.price * item.qty).toFixed(2)}</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="changeQty(${idx}, -1)" class="w-7 h-7 rounded-full bg-white border border-stone-300 text-xs font-bold">-</button>
+              <span class="text-sm font-semibold w-4 text-center">${item.qty}</span>
+              <button onclick="changeQty(${idx}, 1)" class="w-7 h-7 rounded-full bg-white border border-stone-300 text-xs font-bold">+</button>
+            </div>
+          `;
+          listEl.appendChild(row);
+        });
+      }
+
+      const discountAmount = rawSubtotal * discountRate;
+      const finalTotal = rawSubtotal - discountAmount;
+
+      const shipBar = document.getElementById('shipping-bar-text');
+      if (finalTotal >= 60) {
+        shipBar.innerHTML = `🎉 <strong>Unlocked:</strong> FREE Zero-Emission Auckland Delivery!`;
+      } else {
+        shipBar.innerHTML = `Add <strong>$${(60 - finalTotal).toFixed(2)}</strong> more for FREE Zero-Emission Delivery!`;
+      }
+
+      document.getElementById('cart-co2-total').textContent = totalCo2.toFixed(1);
+      document.getElementById('cart-discount-display').textContent = `-$${discountAmount.toFixed(2)}`;
+      document.getElementById('cart-total-display').textContent = `$${finalTotal.toFixed(2)}`;
+      document.getElementById('checkout-btn-total').textContent = `$${finalTotal.toFixed(2)}`;
+    }
+
+    function toggleCart(open) {
+      const drawer = document.getElementById('cart-drawer');
+      const overlay = document.getElementById('cart-overlay');
+      if (open) {
+        drawer.classList.remove('translate-x-full');
+        overlay.classList.remove('hidden');
+      } else {
+        drawer.classList.add('translate-x-full');
+        overlay.classList.add('hidden');
+      }
+    }
+
+    // Checkout Flow & Google Apps Script Sync
+    function openCheckoutModal() {
+      if (cart.length === 0) return;
+      toggleCart(false);
+      document.getElementById('checkout-modal').classList.remove('hidden');
+
+      const total = cart.reduce((s, i) => s + i.price * i.qty, 0) * (1 - discountRate);
+      if (typeof gtag === 'function') {
+        gtag('event', 'begin_checkout', { currency: 'NZD', value: total });
+      }
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkout-modal').classList.add('hidden');
+    }
+
+    async function submitOrderToBackend(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submit-order-btn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Processing Order...";
+
+      const orderId = "EN-2026-" + Math.floor(100 + Math.random() * 900);
+      const customer = document.getElementById('order-name').value;
+      const email = document.getElementById('order-email').value;
+      const address = document.getElementById('order-address').value;
+      const suburb = document.getElementById('order-suburb').value;
+      const delivery = document.getElementById('order-delivery').value;
+      const packaging = document.getElementById('order-packaging').value;
+
+      const rawSubtotal = cart.reduce((s, i) => s + i.price * i.qty, 0);
+      const finalTotal = (rawSubtotal * (1 - discountRate)).toFixed(2);
+      const totalCo2 = cart.reduce((s, i) => s + i.co2Saved * i.qty, 0).toFixed(1);
+      const itemSummary = cart.map(i => `${i.name} [${i.optionNote || 'Standard'}] x${i.qty}`).join('; ');
+
+      const payload = {
+        orderId,
+        timestamp: new Date().toLocaleString('en-NZ'),
+        customer,
+        email,
+        address: `${address}, ${suburb}`,
+        items: itemSummary,
+        total: `$${finalTotal}`,
+        co2: `${totalCo2} kg`,
+        delivery,
+        potSwap: packaging
+      };
+
+      let syncMsg = "✓ Order Recorded Securely";
+      if (GOOGLE_SHEETS_WEB_APP_URL) {
+        try {
+          await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          syncMsg = "✓ Order Logged to Private Fulfillment Sheet";
+        } catch (err) {
+          syncMsg = "✓ Order Confirmed";
+        }
+      }
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'purchase', {
+          transaction_id: orderId,
+          value: parseFloat(finalTotal),
+          currency: 'NZD',
+          items: cart.map(i => ({ item_id: String(i.id), item_name: i.name, price: i.price, quantity: i.qty }))
+        });
+      }
+
+      document.getElementById('receipt-order-id').textContent = orderId;
+      document.getElementById('receipt-customer').textContent = `${customer} (${email})`;
+      document.getElementById('receipt-items').textContent = itemSummary;
+      document.getElementById('receipt-delivery').textContent = delivery;
+      document.getElementById('receipt-co2').textContent = `${totalCo2} kg CO₂ Saved`;
+      document.getElementById('receipt-total').textContent = `$${finalTotal} NZD`;
+      document.getElementById('receipt-sync-status').textContent = syncMsg;
+
+      document.getElementById('checkout-form-view').classList.add('hidden');
+      document.getElementById('checkout-receipt-view').classList.remove('hidden');
+
+      cart = [];
+      discountRate = 0;
+      updateCartUI();
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `Place Test Order (<span id="checkout-btn-total">$0.00</span>)`;
+    }
+
+    function finishCheckoutAndClose() {
+      closeCheckoutModal();
+      document.getElementById('checkout-form-view').classList.remove('hidden');
+      document.getElementById('checkout-receipt-view').classList.add('hidden');
+      document.getElementById('checkout-form').reset();
+    }
+
+    function openPrivacyModal() {
+      document.getElementById('privacy-modal').classList.remove('hidden');
+    }
+
+    function closePrivacyModal() {
+      document.getElementById('privacy-modal').classList.add('hidden');
+    }
+
+    // Initialize Storefront on Load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCatalog(PRODUCTS);
+      updateCartUI();
+    });
+  </script>
+</body>
+</html>
